@@ -9,6 +9,8 @@ const db = {
       id: 1,
       title: "East Facing Room in Tuscany Apartments",
       header: {
+        image:
+          "https://images1.apartments.com/i2/Ugp3y9YK4y4tJSiFCh2pIpWSgqY0YQEQRu7hDxxxX90/111/image.jpg",
         bed: 1,
         bath: 1,
         address: "3770 S Figueroa St, Los Angeles",
@@ -36,6 +38,8 @@ const db = {
       id: 2,
       title: "West Facing Room in WREN Apartments",
       header: {
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2j0EMz1W3zuO8T3sxxG_dScJ9q-MC_jQ1-PqoUT0FX-lMnhut&s",
         bed: 1,
         bath: 1,
         address: "1230 S Olive St, Los Angeles",
@@ -72,14 +76,11 @@ app.get("/api/listings", (request, response) => {
 });
 
 app.post("/api/listings", (request, response) => {
-  //   const post = request.body;
-  //   post.id = db.listings.length + 1;
-  //   db.listings.push(post);
-  //   response.json(post);
   const listing = {
     id: db.listings.length + 1,
     title: request.body.title,
     header: {
+      image: request.body.header.image,
       bed: request.body.header.bed,
       bath: request.body.header.bath,
       address: request.body.header.address,
