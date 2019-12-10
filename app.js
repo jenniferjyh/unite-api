@@ -20,6 +20,7 @@ const db = {
           "https://images1.apartments.com/i2/Ugp3y9YK4y4tJSiFCh2pIpWSgqY0YQEQRu7hDxxxX90/111/image.jpg",
         bed: 1,
         bath: 1,
+        city: "Los Angeles",
         address: "3770 S Figueroa St, Los Angeles",
         price: 1200,
         startDate: "06/01/2020",
@@ -49,6 +50,7 @@ const db = {
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2j0EMz1W3zuO8T3sxxG_dScJ9q-MC_jQ1-PqoUT0FX-lMnhut&s",
         bed: 1,
         bath: 1,
+        city: "Los Angeles",
         address: "1230 S Olive St, Los Angeles",
         price: 1100,
         startDate: "05/01/2020",
@@ -66,6 +68,66 @@ const db = {
         wifi: "Spectrum 5G",
         AC: "In Room",
         parking: "street parking",
+        map: "",
+        rules: ""
+      }
+    },
+    {
+      id: 3,
+      title: "Entire Place in Domain West Hollywood",
+      header: {
+        image:
+          "https://images.rtg-prod.com/queen-bedroom-sets_room-grid.jpg?cache-id=ed9e4b87102137f4949c8b0fac698409&h=550",
+        bed: 2,
+        bath: 1,
+        city: "West Hollywood",
+        address: "7141 Santa Monica Blvd, West Hollywood",
+        price: 1300,
+        startDate: "06/01/2020",
+        endDate: "09/01/2020",
+        likes: 300,
+        host: "Chelsea Lucas"
+      },
+      deets: {
+        description:
+          "This is where I live for this whole year - the room is extremely spacious and all furniture is provided for you.",
+        kitchen: "shared with 1 other",
+        gym: "2nd floor in the building",
+        washer: "in unit",
+        dryer: "in unit",
+        wifi: "Spectrum 5G",
+        AC: "Central Control",
+        parking: "valet available",
+        map: "",
+        rules: ""
+      }
+    },
+    {
+      id: 4,
+      title: "Sunlit Room in 2-story House",
+      header: {
+        image:
+          "https://www.ikea.com/images/34/27/342767e3029cd4e1fd97a3097d24d3a3.jpg?f=s",
+        bed: 1,
+        bath: 1,
+        city: "San Gabriel",
+        address: "1098 Montecito Dr, San Gabriel",
+        price: 900,
+        startDate: "06/01/2020",
+        endDate: "09/01/2020",
+        likes: 80,
+        host: "Christine Park"
+      },
+      deets: {
+        description:
+          "This is where I live for this whole year - the room is extremely spacious and all furniture is provided for you.",
+        kitchen: "shared with 1 other",
+        gym: "2nd floor in the building",
+        washer: "in unit",
+        dryer: "in unit",
+        wifi: "Spectrum 5G",
+        AC: "Central Control",
+        parking: "valet available",
         map: "",
         rules: ""
       }
