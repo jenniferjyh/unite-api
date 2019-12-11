@@ -15,7 +15,9 @@ const db = {
     {
       id: 1,
       title: "East Facing Room in Tuscany Apartments",
+
       header: {
+        mypost: false,
         image:
           "https://images1.apartments.com/i2/Ugp3y9YK4y4tJSiFCh2pIpWSgqY0YQEQRu7hDxxxX90/111/image.jpg",
         bed: 1,
@@ -45,7 +47,9 @@ const db = {
     {
       id: 2,
       title: "West Facing Room in WREN Apartments",
+
       header: {
+        mypost: false,
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2j0EMz1W3zuO8T3sxxG_dScJ9q-MC_jQ1-PqoUT0FX-lMnhut&s",
         bed: 1,
@@ -75,7 +79,9 @@ const db = {
     {
       id: 3,
       title: "Entire Place in Domain West Hollywood",
+
       header: {
+        mypost: false,
         image:
           "https://images.rtg-prod.com/queen-bedroom-sets_room-grid.jpg?cache-id=ed9e4b87102137f4949c8b0fac698409&h=550",
         bed: 2,
@@ -105,7 +111,9 @@ const db = {
     {
       id: 4,
       title: "Sunlit Room in 2-story House",
+
       header: {
+        mypost: false,
         image:
           "https://www.ikea.com/images/34/27/342767e3029cd4e1fd97a3097d24d3a3.jpg?f=s",
         bed: 1,
@@ -149,6 +157,7 @@ app.post("/api/listings", (request, response) => {
     id: db.listings.length + 1,
     title: request.body.title,
     header: {
+      mypost: request.body.header.mypost,
       image: request.body.header.image,
       bed: request.body.header.bed,
       bath: request.body.header.bath,
