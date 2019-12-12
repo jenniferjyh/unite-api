@@ -161,6 +161,7 @@ app.post("/api/listings", (request, response) => {
       image: request.body.header.image,
       bed: request.body.header.bed,
       bath: request.body.header.bath,
+      city: request.body.header.city,
       address: request.body.header.address,
       price: request.body.header.price,
       startDate: request.body.header.startDate,
