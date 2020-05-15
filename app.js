@@ -6,10 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: [
-      "http://exciting-stomach.surge.sh",
-      "https://exciting-stomach.surge.sh"
-    ]
+    origin: ["http://localhost:3000"],
   })
 );
 
@@ -31,7 +28,7 @@ const db = {
         startDate: "06/01/2020",
         endDate: "09/01/2020",
         likes: 120,
-        host: "Jacob Moon"
+        host: "Jacob Moon",
       },
       deets: {
         description:
@@ -44,8 +41,8 @@ const db = {
         AC: "Central Control",
         parking: "valet available",
         map: "",
-        rules: ""
-      }
+        rules: "",
+      },
     },
     {
       id: 2,
@@ -63,7 +60,7 @@ const db = {
         startDate: "05/01/2020",
         endDate: "08/01/2020",
         likes: 80,
-        host: "Joseph Park"
+        host: "Joseph Park",
       },
       deets: {
         description:
@@ -76,8 +73,8 @@ const db = {
         AC: "In Room",
         parking: "street parking",
         map: "",
-        rules: ""
-      }
+        rules: "",
+      },
     },
     {
       id: 3,
@@ -95,7 +92,7 @@ const db = {
         startDate: "06/01/2020",
         endDate: "09/01/2020",
         likes: 300,
-        host: "Chelsea Lucas"
+        host: "Chelsea Lucas",
       },
       deets: {
         description:
@@ -108,8 +105,8 @@ const db = {
         AC: "Central Control",
         parking: "valet available",
         map: "",
-        rules: ""
-      }
+        rules: "",
+      },
     },
     {
       id: 4,
@@ -127,7 +124,7 @@ const db = {
         startDate: "06/01/2020",
         endDate: "09/01/2020",
         likes: 80,
-        host: "Christine Park"
+        host: "Christine Park",
       },
       deets: {
         description:
@@ -140,15 +137,15 @@ const db = {
         AC: "Central Control",
         parking: "valet available",
         map: "",
-        rules: ""
-      }
-    }
-  ]
+        rules: "",
+      },
+    },
+  ],
 };
 const err = {
   errors: {
-    title: "title is required"
-  }
+    title: "title is required",
+  },
 };
 
 app.get("/api/listings", (request, response) => {
@@ -170,7 +167,7 @@ app.post("/api/listings", (request, response) => {
       startDate: request.body.header.startDate,
       endDate: request.body.header.endDate,
       likes: request.body.header.likes,
-      host: request.body.header.host
+      host: request.body.header.host,
     },
     deets: {
       description: request.body.deets.description,
@@ -182,8 +179,8 @@ app.post("/api/listings", (request, response) => {
       AC: request.body.deets.AC,
       parking: request.body.deets.parking,
       map: request.body.deets.map,
-      rules: request.body.deets.rules
-    }
+      rules: request.body.deets.rules,
+    },
   };
   if (!listing.title) {
     return response.status(400).json(err.errors);
@@ -194,7 +191,7 @@ app.post("/api/listings", (request, response) => {
 
 app.get("/api/listings/:id", (request, response) => {
   const id = Number(request.params.id);
-  const post = db.listings.find(post => {
+  const post = db.listings.find((post) => {
     return post.id === id;
   });
 
@@ -207,12 +204,12 @@ app.get("/api/listings/:id", (request, response) => {
 
 app.delete("/api/listings/:id", (request, response) => {
   const id = Number(request.params.id);
-  const post = db.listings.find(post => {
+  const post = db.listings.find((post) => {
     return post.id === id;
   });
 
   if (post) {
-    db.listings = db.listings.filter(post => {
+    db.listings = db.listings.filter((post) => {
       return post.id !== id;
     });
     response.status(204).send();
@@ -223,7 +220,7 @@ app.delete("/api/listings/:id", (request, response) => {
 
 app.put("/api/listings/:id", (request, response) => {
   const id = Number(request.params.id);
-  const post = db.listings.find(post => {
+  const post = db.listings.find((post) => {
     return post.id === id;
   });
 
