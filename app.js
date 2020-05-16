@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://unite-app.surge.sh/"],
+    origin: ["http://unite-app.surge.sh", "http://unite-app.surge.sh"],
   })
 );
 
